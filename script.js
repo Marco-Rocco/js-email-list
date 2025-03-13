@@ -20,9 +20,6 @@ for (let i = 1; i <= 10; i++ ){
             result += `<li>${showEmail}</li> `
             emailList.innerHTML = result
             
-
-
-
             
         })
         .catch((error => {
@@ -31,5 +28,14 @@ for (let i = 1; i <= 10; i++ ){
 }
 
 
+//////////
 
+// collego il bottone
+let fetchButton = document.getElementById('fetch10');
 
+// crea l'evento al click
+fetchButton.addEventListener('click', function(){
+    console.log('click')
+    fetch(randomMail)
+    .then(response)
+})
